@@ -2,7 +2,7 @@ import React from 'react'
 
 import Paper from 'material-ui/Paper';
 
-const style = {
+const styles = {
     margin: '20px',
     padding: '20px'
 }
