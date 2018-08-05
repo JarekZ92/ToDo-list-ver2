@@ -10,19 +10,26 @@ class ToDo extends React.Component {
       { name: "Wyprowadź psa", key: "456" },
       { name: "Umyj okna", key: "789" }
     ],
-    newTaskName: 'Add new task'
+    newTaskName: ""
   };
 
   newTaskNameChange = (event, newValue) => {
-      this.setState({
-        newTaskName: newValue
-      })
-
-  }
+    this.setState({
+      newTaskName: newValue
+    });
+  };
 
   addNewTask = () => {
-      alert('Dodaj nowy task (test)')
-  }
+    const newTask = {
+      name: this.state.newTaskName,
+      key: Date.now()
+    };
+
+    const newTasksArray = this.state.tasks.concat(newTask)
+    this.setState({
+        tasks: newTasksArray
+      });
+  };
 
   removeTask = taskKey => {
     const newTasksArray = this.state.tasks.filter(task => taskKey !== task.key);
@@ -36,9 +43,9 @@ class ToDo extends React.Component {
       <div>
         <PaperContainer>
           <Form
-          newTaskNameChange={this.newTaskNameChange} 
-          newTaskName={this.state.newTaskName}
-          addNewTask={this.addNewTask}
+            newTaskNameChange={this.newTaskNameChange}
+            newTaskName={this.state.newTaskName}
+            addNewTask={this.addNewTask}
           />
         </PaperContainer>
         <PaperContainer>
