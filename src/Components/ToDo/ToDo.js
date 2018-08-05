@@ -15,11 +15,13 @@ class ToDo extends React.Component {
 
   newTaskNameChange = (event, newValue) => {
     this.setState({
-      newTaskName: newValue
+      newTaskName: newValue,
     });
   };
 
   addNewTask = () => {
+    if(!this.state.newTaskName) return
+
     const newTask = {
       name: this.state.newTaskName,
       key: Date.now()
@@ -27,15 +29,15 @@ class ToDo extends React.Component {
 
     const newTasksArray = this.state.tasks.concat(newTask)
     this.setState({
-        tasks: newTasksArray,
-        newTaskName: ''
+        tasks: newTasksArray
       });
   };
 
   removeTask = taskKey => {
     const newTasksArray = this.state.tasks.filter(task => taskKey !== task.key);
     this.setState({
-      tasks: newTasksArray
+      tasks: newTasksArray,
+      newTaskName: ''
     });
   };
 
