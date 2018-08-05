@@ -8,6 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 const Forms = (props) => (
     <div>
         <TextField 
+        placeholder={'Enter new task here!'}
         value={props.newTaskName}
         fullWidth={true}
         onChange={props.newTaskNameChange}
