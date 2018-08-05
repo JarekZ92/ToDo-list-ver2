@@ -1,7 +1,11 @@
 import React from 'react'
 
+import SingleTask from './SingleTask'
+
+
+
 const ListOfTasks = (props) => (
-    <div>ListOfTasks</div>
+   <SingleTask />
 )
 
 export default ListOfTasks
