@@ -29,7 +29,8 @@ class ToDo extends React.Component {
 
     const newTasksArray = this.state.tasks.concat(newTask)
     this.setState({
-        tasks: newTasksArray
+        tasks: newTasksArray,
+        newTaskName: ''
       });
   };
 
