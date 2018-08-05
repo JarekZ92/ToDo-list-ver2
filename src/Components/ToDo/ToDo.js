@@ -13,7 +13,7 @@ class ToDo extends React.Component {
   };
 
   addNewTask = (taskName) => {
-      
+      alert('Dodaj nowy task (test)')
   }
 
   removeTask = taskKey => {
@@ -27,7 +27,9 @@ class ToDo extends React.Component {
     return (
       <div>
         <PaperContainer>
-          <Form />
+          <Form 
+          addNewTask={this.addNewTask}
+          />
         </PaperContainer>
         <PaperContainer>
           <ListOfTasks

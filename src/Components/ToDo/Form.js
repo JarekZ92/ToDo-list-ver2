@@ -14,6 +14,7 @@ const Forms = (props) => (
         label={'Add new task!'}
         fullWidth={true}
         secondary={true}
+        onClick={props.addNewTask}
         />
     </div>
 )
