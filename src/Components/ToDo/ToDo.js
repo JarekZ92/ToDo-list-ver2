@@ -19,7 +19,9 @@ class ToDo extends React.Component {
                 <Form />
                 </PaperContainer>
                 <PaperContainer>
-                <ListOfTasks />
+                <ListOfTasks
+                tasksProp={this.state.tasks}
+                />
                 </PaperContainer>
             </div>
         )
