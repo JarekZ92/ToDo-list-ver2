@@ -10,6 +10,7 @@ const Forms = (props) => (
         <TextField 
         value={props.newTaskName}
         fullWidth={true}
+        onChange={props.newTaskNameChange}
         />
         <RaisedButton
         label={'Add new task!'}

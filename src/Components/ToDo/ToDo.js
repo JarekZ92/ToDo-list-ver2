@@ -13,7 +13,14 @@ class ToDo extends React.Component {
     newTaskName: 'Add new task'
   };
 
-  addNewTask = (taskName) => {
+  newTaskNameChange = (event, newValue) => {
+      this.setState({
+        newTaskName: newValue
+      })
+
+  }
+
+  addNewTask = () => {
       alert('Dodaj nowy task (test)')
   }
 
@@ -28,7 +35,8 @@ class ToDo extends React.Component {
     return (
       <div>
         <PaperContainer>
-          <Form 
+          <Form
+          newTaskNameChange={this.newTaskNameChange} 
           newTaskName={this.state.newTaskName}
           addNewTask={this.addNewTask}
           />
