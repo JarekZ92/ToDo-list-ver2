@@ -15,11 +15,14 @@ class ToDo extends React.Component {
 
   newTaskNameChange = (event, newValue) => {
     this.setState({
-      newTaskName: newValue
+      newTaskName: newValue,
+      newTaskName: ''
     });
   };
 
   addNewTask = () => {
+    if(!this.state.newTaskName) return
+
     const newTask = {
       name: this.state.newTaskName,
       key: Date.now()
