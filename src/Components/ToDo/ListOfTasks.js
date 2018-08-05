@@ -4,8 +4,11 @@ import SingleTask from './SingleTask'
 
 const ListOfTasks = (props) => (
    <div>
-       {props.taskProp}
-   <SingleTask />
+       {props.tasksProp.map(task => (
+       <SingleTask 
+        nameProp = {task.name}
+       />
+       ))}
    </div>
 )
 
