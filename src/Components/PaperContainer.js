@@ -1,9 +1,14 @@
 import React from 'react'
 
-import Paper from 'material-ui';
+import Paper from 'material-ui/Paper';
+
+const style = {
+    margin: '20px',
+    padding: '20px'
+}
 
 const PaperContainer = (props) => (
-  <Paper>
+  <Paper style={styles}>
     {props.children}
       </Paper>
 )
