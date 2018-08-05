@@ -12,7 +12,10 @@ class ToDo extends React.Component {
     ]
   };
 
- 
+  addNewTask = (taskName) => {
+      
+  }
+
   removeTask = taskKey => {
     const newTasksArray = this.state.tasks.filter(task => taskKey !== task.key);
     this.setState({
@@ -28,8 +31,8 @@ class ToDo extends React.Component {
         </PaperContainer>
         <PaperContainer>
           <ListOfTasks
-            tasksProp={this.state.tasks}
-            deleteTaskProp={this.removeTask}
+            tasksFunc={this.state.tasks}
+            deleteTaskFunc={this.removeTask}
           />
         </PaperContainer>
       </div>

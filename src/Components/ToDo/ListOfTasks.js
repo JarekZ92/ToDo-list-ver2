@@ -4,10 +4,10 @@ import SingleTask from './SingleTask'
 
 const ListOfTasks = (props) => (
    <div>
-       {props.tasksProp.map(task => (
+       {props.tasksFunc.map(task => (
        <SingleTask 
-        nameProp = {task.name}
-        deleteTaskProp2={() => props.deleteTaskProp(task.key)}
+        name = {task.name}
+        deleteTaskFunc={() => props.deleteTaskFunc(task.key)}
        />
        ))}
    </div>
