@@ -42,6 +42,18 @@ class ToDo extends React.Component {
     });
   };
 
+  componentDidMount() {
+    const lastState = JSON.parse(localStorage.getItem('AppState'))
+
+    if (lastState === null) return
+
+    this.setState(lastState)
+}
+
+componentDidUpdate() {
+    localStorage.setItem('AppState', JSON.stringify(this.state))
+}
+
   render() {
     return (
       <div>
