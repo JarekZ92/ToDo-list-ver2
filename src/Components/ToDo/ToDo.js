@@ -9,7 +9,8 @@ class ToDo extends React.Component {
       { name: "Posprzątaj mieszkanie", key: "123" },
       { name: "Wyprowadź psa", key: "456" },
       { name: "Umyj okna", key: "789" }
-    ]
+    ],
+    newTaskName: 'Add new task'
   };
 
   addNewTask = (taskName) => {
@@ -28,6 +29,7 @@ class ToDo extends React.Component {
       <div>
         <PaperContainer>
           <Form 
+          newTaskName={this.state.newTaskName}
           addNewTask={this.addNewTask}
           />
         </PaperContainer>
