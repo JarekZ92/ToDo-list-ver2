@@ -7,7 +7,7 @@ const ListOfTasks = (props) => (
        {props.tasksProp.map(task => (
        <SingleTask 
         nameProp = {task.name}
-        deleteTaskProp={() => props.deleteTaskProp(task.key)}
+        deleteTaskProp2={() => props.deleteTaskProp(task.key)}
        />
        ))}
    </div>
