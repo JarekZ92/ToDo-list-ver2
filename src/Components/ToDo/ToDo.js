@@ -6,9 +6,9 @@ import PaperContainer from "../PaperContainer";
 class ToDo extends React.Component {
   state = {
     tasks: [
-      { name: "Posprzątaj mieszkanie", key: "123" },
-      { name: "Wyprowadź psa", key: "456" },
-      { name: "Umyj okna", key: "789" }
+      { name: "", key: "123" },
+      { name: "", key: "456" },
+      { name: "", key: "789" }
     ],
     newTaskName: ""
   };
